@@ -1,0 +1,11 @@
+/* Linetypes */
+
+#define OpenDoor  Ceiling Up To LowestAdjacentCeiling Minus 4
+#define CloseDoor Ceiling Down To Floor NoCrush
+
+#define DoorCloseDelay   Delay 20sec
+
+LineType ManualDoor-SR 1
+  Repeatable AllowPlayer AllowMonster OnThumped
+  Action Sector OpenDoor Manual
+  Action Sector CloseDoor Manual DoorCloseDelay

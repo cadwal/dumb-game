@@ -1,0 +1,7 @@
+#include "generic.pt"
+#include "missiles.pt"
+#include "weapons.pt"
+#include "decoration.pt"
+#include "creatures.pt"
+#include "linetypes.pt"
+#include "levels.pt"

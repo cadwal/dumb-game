@@ -1,0 +1,28 @@
+/* Generic phasetables */
+
+PhaseTable Mundane
+  Phase INIT A Goto INIT
+
+PhaseTable Blink2
+  Default Duration 100msec
+  Default Glow
+  Phase INIT A
+  Phase -    B  Goto INIT
+
+PhaseTable Blink4
+  Default Duration 100msec
+  Default Glow
+  Phase INIT A
+  Phase -    B
+  Phase -    C
+  Phase -    D  Goto INIT
+
+PhaseTable Cycle4
+  Default Duration 100msec
+  Default Glow
+  Phase LOOP A
+  Phase -    B
+  Phase -    C
+  Phase -    D
+  Phase -    C
+  Phase -    B  Goto LOOP

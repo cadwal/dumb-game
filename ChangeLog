@@ -1,0 +1,47 @@
+Thu Jun 11 23:21:22 1998  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* lvl/Makefile.am: New file.
+	* Makefile.am (SUBDIRS): Added lvl.
+	* configure.in (AC_OUTPUT): Added lvl/Makefile.
+
+Tue Jun  2 18:17:13 1998  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* README.textures: Doc fix.
+
+Tue Apr 21 18:10:05 1998  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* lvl/E1M1.wad: Make the attic have a good view to the sky.
+
+	* genppm/: New directory.
+	* texture/Makefile.am (sky_plan.ppm): Move generation rule to
+	genppm/Makefile.am.  Copy the file from there.
+	* palette/Makefile.am (all_pictures): Include ../genppm/*.ppm.
+
+	* configure.in: Sort program checks by name.
+
+	* pt/levels.pt: New file.
+	* texture/Makefile.am (sky_plan.ppm): Generate.
+	(patch_lumps): Include sky_plan.patch.
+	* configure.in: Look for ppmforge.
+	* lvl/E1M1.wad: Use F_SKY1.
+	* texture/pnames (SKY_PLAN): New entry.
+
+Thu Apr 16 18:20:23 1998  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* texture/pnames (DBMARB): Remove BLUESTEP reference.
+
+	* Rewrite Makefiles.
+
+Wed Apr  8 18:02:57 1998  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* misc/protos.pt (PhaseTable Mundane, PhaseTable Blink2,
+	PhaseTable Blink4): Rename labels.
+	(Proto Fireball): Remove id.
+	(Proto Player): Add Player keyword.
+	(PhaseTable Blink2, PhaseTable Blink4): Add time units.
+	(PhaseTable HeldFireballThrower, Proto HeldFireballThrower,
+	Gettable FireballThrower): New.
+
+Mon Apr  6 16:40:15 1998  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* First version using Automake.

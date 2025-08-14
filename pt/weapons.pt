@@ -1,0 +1,24 @@
+/* Weapons */
+
+PhaseTable HeldFireballThrower
+  Default Duration 20msec
+  Phase INIT  A  Goto INIT
+  Default NoSigs
+  Default Duration 50msec
+  Phase SHOOT A  SigShoot Shoot Glow
+  Phase -     A  Goto INIT
+
+Proto HeldFireballThrower
+  Bogus
+  AimArc 10deg
+  Size 32 56
+  Shoots Fireball
+
+Gettable FireballThrower
+  Initial 1
+  Collect 1
+  WepSel
+  WeaponNumber 1
+  Bogotype HeldFireballThrower
+  UseNum 0
+  GotThe Message FIREBALL_THROWER

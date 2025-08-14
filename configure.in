@@ -1,0 +1,63 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(pt/game.pt)
+AM_INIT_AUTOMAKE(dumb-game, 0.13.0)
+
+AC_PROG_INSTALL
+AC_PROG_CXXCPP
+
+dnl Use AC_PATH_PROG instead of AC_CHECK_PROG.  That way the variable will
+dnl contain the whole filename of the executable and the Makefile can make
+dnl other files depend on it, so that they are generated again if the
+dnl executable (and possibly the format) changes.
+AC_PATH_PROG(MKPNAMES, mkpnames, "no")
+if test "$MKPNAMES" == no; then
+  AC_MSG_ERROR(install mkpnames, it's in the DUMB package)
+fi
+AC_PATH_PROG(PPMTODUMB, ppmtodumb, "no")
+if test "$PPMTODUMB" == no; then
+  AC_MSG_ERROR(install ppmtodumb, it's in the DUMB package)
+fi
+AC_PATH_PROG(PTCOMP, ptcomp, "no")
+if test "$PTCOMP" == no; then
+  AC_MSG_ERROR(install ptcomp, it's in the DUMB package)
+fi
+AC_PATH_PROG(WADTOOL, wadtool, "no")
+if test "$WADTOOL" == no; then
+  AC_MSG_ERROR(install wadtool, it's in the DUMB package)
+fi
+
+AC_CHECK_PROG(PNMCAT, pnmcat, pnmcat, "no")
+if test "$PNMCAT" == no; then
+  AC_MSG_ERROR(install pnmcat, it's in the netpbm package)
+fi
+AC_CHECK_PROG(PNMDEPTH, pnmdepth, pnmdepth, "no")
+if test "$PNMDEPTH" == no; then
+  AC_MSG_ERROR(install pnmdepth, it's in the netpbm package)
+fi
+AC_CHECK_PROG(PNMFLIP, pnmflip, pnmflip, "no")
+if test "$PNMFLIP" == no; then
+  AC_MSG_ERROR(install pnmflip, it's in the netpbm package)
+fi
+AC_CHECK_PROG(PPMFORGE, ppmforge, ppmforge, "no")
+if test "$PPMFORGE" == no; then
+  AC_MSG_ERROR(install ppmforge, it's in the netpbm package)
+fi
+AC_CHECK_PROG(PPMCHANGE, ppmchange, ppmchange, "no")
+if test "$PPMCHANGE" == no; then
+  AC_MSG_ERROR(install ppmchange, it's in the netpbm package)
+fi
+AC_CHECK_PROG(PPMMAKE, ppmmake, ppmmake, "no")
+if test "$PPMMAKE" == no; then
+  AC_MSG_ERROR(install ppmmake, it's in the netpbm package)
+fi
+AC_CHECK_PROG(PPMQUANT, ppmquant, ppmquant, "no")
+if test "$PPMQUANT" == no; then
+  AC_MSG_ERROR(install ppmquant, it's in the netpbm package)
+fi
+AC_CHECK_PROG(PPMTOMAP, ppmtomap, ppmtomap, "no")
+if test "$PPMTOMAP" == no; then
+  AC_MSG_ERROR(install ppmtomap, it's in the netpbm package)
+fi
+
+AC_OUTPUT(Makefile genppm/Makefile lvl/Makefile palette/Makefile
+ pt/Makefile sprite/Makefile texture/Makefile)

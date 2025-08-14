@@ -1,0 +1,22 @@
+/* Missiles */
+
+PhaseTable Fireball
+  Default Duration 30msec
+  Default Glow
+  Phase INIT	A
+  Phase -	B
+  Phase -	C Goto INIT
+  Default NoSigs
+  Default Duration 50msec
+  Phase EXPLODE D Explode SigExplode
+  Phase -	E
+  Phase -	F Duration 80msec Destroy
+
+Proto Fireball
+  Sprite FBAL ZCenter
+  Size 16 16
+  Damage 10 
+  Hits 1 BulletProof
+  Mass 0
+  Explosive
+  Speed 50/sec

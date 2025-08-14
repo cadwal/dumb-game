@@ -1,0 +1,12 @@
+/* Creatures */
+
+PhaseTable Player
+  Default Duration 50msec
+  Phase IDLE  A  Idle Goto IDLE
+  Phase SHOOT A  SigShoot Glow Goto IDLE
+
+Proto Player 1
+  Size 16 56
+  Mass 100
+  Hits 100
+  Beastie Player

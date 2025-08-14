@@ -1,0 +1,16 @@
+This is the sample game for DUMB, a Doom-like 3D game engine.  You can
+read more about DUMB at http://samba.anu.edu.au/dumb/.
+
+Currently, there's only one level, a few rooms, no monsters, no exit.
+Hopefully this will evolve into something better.  If it does, we'll
+also have to find a real name for it, as "the DUMB game" sounds
+rather... dumb.
+
+To be able to build this, you must first install:
+- DUMB 0.13.0 (you could try with 0.12 too)
+- netpbm
+- GNU make.
+- a C++ compiler, because we need the preprocessor.
+
+So, if you just downloaded DUMB and this game, you'll first have to
+install DUMB.  Then come back and configure and install this.
