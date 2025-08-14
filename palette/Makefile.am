@@ -8,9 +8,8 @@ CLEANFILES = pal-nt.ppm pal-tail.ppm palette.ppm PLAYPAL.lump
 palette_wad = palette.wad
 colormap_lumps = COLORMAP.lump COLORM16.lump COLORM32.lump
 
-all_pictures = ../genppm/*.ppm \
- $(top_srcdir)/sprite/*.ppm \
- $(top_srcdir)/texture/*.ppm
+all_pictures = ../genppm/*.ppm $(top_srcdir)/sprite/*.ppm	\
+$(top_srcdir)/texture/*.ppm
 
 $(palette_wad): PLAYPAL.lump $(colormap_lumps) $(WADTOOL)
 	$(WADTOOL) -w $@ \

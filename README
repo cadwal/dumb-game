@@ -7,7 +7,7 @@ also have to find a real name for it, as "the DUMB game" sounds
 rather... dumb.
 
 To be able to build this, you must first install:
-- DUMB 0.13.0 (you could try with 0.12 too)
+- DUMB 0.13.3 (Due to different ptcomp parameters, 0.13.1 will not work.)
 - netpbm
 - GNU make.
 - a C++ compiler, because we need the preprocessor.

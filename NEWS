@@ -1,3 +1,12 @@
+* Changes in dumb-game 0.13.1.
+
+** DUMB 0.13.3 required.
+
+Ptcomp used to be called with the directory name as the only
+parameter.  Now the directory name is given via the -d option.
+
+** A few bugs fixed in configuration scripts and Makefiles.
+
 * Changes in version 0.13.0:
 
 ** Updated to work with DUMB 0.13.0.

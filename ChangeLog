@@ -1,4 +1,26 @@
+1998-10-21  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* Released dumb-game-0.13.1.
+
+	* README: DUMB 0.13.3 is required.
+
+	* pt/Makefile.am (pt_preprocess): Don't use -x c-header because
+	/lib/cpp doesn't understand it.
+	($(pt_lumps)): Create a temporary .cc file and preprocess that.
+	Give ptcomp the -d option.
+
+1998-09-27  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* configure.in: Test equivalence with = rather than ==.
+	Reported by Arturo Espinosa Alda.
+
+1998-09-21  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* configure.in: Added brackets around messages containing commas.
+
 Thu Jun 11 23:21:22 1998  Kalle Olavi Niemitalo  <tosi@stekt.oulu.fi>
+
+	* Released dumb-game-0.13.0.
 
 	* lvl/Makefile.am: New file.
 	* Makefile.am (SUBDIRS): Added lvl.

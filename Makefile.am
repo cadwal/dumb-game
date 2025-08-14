@@ -15,7 +15,8 @@ texture_wad = texture/texture.wad
 sprite_wad = sprite/sprite.wad
 level_wads = $(srcdir)/lvl/E1M1.wad
 
-subwads = $(palette_wad) $(pt_wad) $(texture_wad) $(sprite_wad) $(level_wads)
+subwads = $(palette_wad) $(pt_wad) $(texture_wad) $(sprite_wad)	\
+$(level_wads)
 
 game.wad: $(subwads) $(WADTOOL)
 	$(WADTOOL) -W $@ \
