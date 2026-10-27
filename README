@@ -29,3 +29,10 @@ The result is game.wad, an IWAD that needs nothing else.  Play it with
 prebuilt/game.wad is a ready-made copy, for systems where the tools
 above aren't available (e.g. building DUMB inside DOSBox-X).  Rebuild
 it with "make" and copy game.wad there when the sources change.
+Some textures are made by netpbm's ppmforge, which is random, so a
+rebuild changes them; to keep the prebuilt art, copy over only the
+lumps whose sources changed.
+
+E1M1 has starts for 4 players, so it can be played over the network
+(DUMB's --dumb-master and --dumb-slave).  There is no player sprite
+yet, so players can't see each other.

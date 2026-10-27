@@ -10,3 +10,25 @@ Proto Player 1
   Mass 100
   Hits 100
   Beastie Player
+
+/* Players 2 to 4, for network games; E1M1 has starts for them.
+   There is no player sprite yet, so the players can't see each
+   other.  */
+Proto Player2 2
+  Phases Player
+  Size 16 56
+  Mass 100
+  Hits 100
+  Beastie Player
+Proto Player3 3
+  Phases Player
+  Size 16 56
+  Mass 100
+  Hits 100
+  Beastie Player
+Proto Player4 4
+  Phases Player
+  Size 16 56
+  Mass 100
+  Hits 100
+  Beastie Player
