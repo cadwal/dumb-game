@@ -9,9 +9,9 @@ rather... dumb.
 This is the modernize branch, updated for current DUMB and autotools,
 to go with the modernize branch of https://github.com/cadwal/dumb.  It
 lives side by side with main, which keeps the original 0.13.1 sources
-unchanged (also tagged original-0.13.1).  The first stage of this
-work, the djgpp-modernize branch, is kept as the tag
-djgpp-modernize-final.
+unchanged (also the tag v0.13.1).  The first stage of this work was
+the djgpp-modernize branch, which is all part of this one; its last
+state is kept as the tag djgpp-modernize-final.
 
 To be able to build this, you must first install:
 - DUMB 0.13.11 or later, with its tools ptcomp, wadtool, ppmtodumb and
