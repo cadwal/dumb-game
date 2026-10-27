@@ -7,7 +7,7 @@ dumbdata_DATA = game.wad
 
 MOSTLYCLEANFILES = game.wad
 
-EXTRA_DIST = wadinfo README.textures
+EXTRA_DIST = wadinfo README.textures tools/patch-lumps.py
 
 palette_wad = palette/palette.wad
 pt_wad = pt/pt.wad

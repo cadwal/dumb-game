@@ -9,7 +9,9 @@ rather... dumb.
 This is the modernize branch, updated for current DUMB and autotools,
 to go with the modernize branch of https://github.com/cadwal/dumb.  It
 lives side by side with main, which keeps the original 0.13.1 sources
-unchanged, and with djgpp-modernize, where this work started.
+unchanged (also tagged original-0.13.1).  The first stage of this
+work, the djgpp-modernize branch, is kept as the tag
+djgpp-modernize-final.
 
 To be able to build this, you must first install:
 - DUMB 0.13.11 or later, with its tools ptcomp, wadtool, ppmtodumb and
@@ -32,7 +34,10 @@ above aren't available (e.g. building DUMB inside DOSBox-X).  Rebuild
 it with "make" and copy game.wad there when the sources change.
 Some textures are made by netpbm's ppmforge, which is random, so a
 rebuild changes them; to keep the prebuilt art, copy over only the
-lumps whose sources changed.
+lumps whose sources changed, e.g. after changing pt/ and lvl/:
+
+  python3 tools/patch-lumps.py prebuilt/game.wad game.wad \
+     prebuilt/game.wad PROTOS THINGS
 
 E1M1 has starts for 4 players, so it can be played over the network
 (DUMB's --dumb-master and --dumb-slave).  There is no player sprite
