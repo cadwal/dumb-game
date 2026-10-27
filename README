@@ -6,6 +6,10 @@ Hopefully this will evolve into something better.  If it does, we'll
 also have to find a real name for it, as "the DUMB game" sounds
 rather... dumb.
 
+This is the djgpp-modernize branch, updated for current DUMB and
+autotools.  It lives side by side with main, which keeps the original
+0.13.1 sources unchanged.
+
 To be able to build this, you must first install:
 - DUMB 0.13.11 or later, with its tools ptcomp, wadtool, ppmtodumb and
   mkpnames (the djgpp-modernize branch of https://github.com/cadwal/dumb;
