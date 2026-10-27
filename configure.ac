@@ -1,6 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(pt/game.pt)
-AM_INIT_AUTOMAKE(dumb-game, 0.13.1)
+AC_INIT([dumb-game], [0.13.1])
+AC_CONFIG_SRCDIR([pt/game.pt])
+AM_INIT_AUTOMAKE([foreign])
 
 AC_PROG_INSTALL
 AC_PROG_CXXCPP
@@ -59,5 +60,6 @@ if test "$PPMTOMAP" = no; then
   AC_MSG_ERROR([install ppmtomap, it's in the netpbm package])
 fi
 
-AC_OUTPUT(Makefile genppm/Makefile lvl/Makefile palette/Makefile
- pt/Makefile sprite/Makefile texture/Makefile)
+AC_CONFIG_FILES([Makefile genppm/Makefile lvl/Makefile palette/Makefile
+ pt/Makefile sprite/Makefile texture/Makefile])
+AC_OUTPUT

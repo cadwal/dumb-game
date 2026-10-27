@@ -7,10 +7,21 @@ also have to find a real name for it, as "the DUMB game" sounds
 rather... dumb.
 
 To be able to build this, you must first install:
-- DUMB 0.13.3 (Due to different ptcomp parameters, 0.13.1 will not work.)
+- DUMB 0.13.11 or later, with its tools ptcomp, wadtool, ppmtodumb and
+  mkpnames (the djgpp-modernize branch of https://github.com/cadwal/dumb;
+  ppmtodumb needs the netpbm development library).  The .pt files
+  use the current ptcomp syntax, so older DUMB versions won't work.
 - netpbm
 - GNU make.
 - a C++ compiler, because we need the preprocessor.
 
 So, if you just downloaded DUMB and this game, you'll first have to
-install DUMB.  Then come back and configure and install this.
+install DUMB (or put its built ptcomp and tool directories in PATH).
+Then come back and run "autoreconf -fi", configure and make.
+
+The result is game.wad, an IWAD that needs nothing else.  Play it with
+"xdumb -w game.wad" (or dosdumb.exe -w game.wad under DOS).
+
+prebuilt/game.wad is a ready-made copy, for systems where the tools
+above aren't available (e.g. building DUMB inside DOSBox-X).  Rebuild
+it with "make" and copy game.wad there when the sources change.
